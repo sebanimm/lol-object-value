@@ -1,7 +1,12 @@
 import requests
 import pandas as pd
+import os
+from dotenv import load_dotenv
 
-API_KEY = "RGAPI-b9a15cb5-9306-4214-b9ac-cee804eb3178"
+
+load_dotenv("API_KEY")
+
+API_KEY = os.getenv("API_KEY")
 REGION = "kr"
 
 유충먹은경우 = {i: [] for i in range(1, 7)}
